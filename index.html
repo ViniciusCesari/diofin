@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diofin Tablets - डायबिटीज के लिए एकीकृत समर्थन. Supports reducing blood sugar and stabilizing blood sugar long-term.">
+    <title>Diofin Tablets | Healthy Sugar Management India</title>
+    <style>
+        /* --- CSS: Adaptado para Diofin (Ayurvedic/Medical Theme) --- */
+        
+        :root {
+            --primary-color: #c0392b; 
+            --secondary-color: #e67e22; 
+            --accent-green: #27ae60; 
+            --text-dark: #2c3e50;
+            --bg-light: #fdfefe;
+            --warning-bg: #fff3cd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Mukta', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        /* Botão CTA Pulsante */
+        .btn-cta {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 18px 45px;
+            font-size: 1.3rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(192, 57, 43, 0.4);
+            transition: transform 0.3s;
+            border: 2px solid #fff;
+            animation: pulse 2s infinite;
+            margin-top: 15px;
+        }
+
+        .btn-cta:hover {
+            transform: scale(1.05);
+            background: #a93226;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(192, 57, 43, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0); }
+        }
+
+        /* Preço Box */
+        .price-tag {
+            background: #fff;
+            color: var(--text-dark);
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .new-price {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .logo span { color: var(--primary-color); }
+
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { text-decoration: none; color: var(--text-dark); font-weight: 600; }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 120px 0 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 15px; color: var(--primary-color); line-height: 1.2; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: auto; color: #555; }
+        
+        .product-hero-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 500px;
+            margin: 20px 0;
+            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.2));
+        }
+
+        /* Seções Gerais */
+        section { padding: 60px 0; }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: var(--text-dark);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+
+        /* Lista de Benefícios (Hero) */
+        .hero-list {
+            text-align: left;
+            max-width: 650px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .hero-list li {
+            list-style: none;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+        .hero-list li::before {
+            content: '✔';
+            color: var(--accent-green);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Ingredientes (Grid) */
+        .ingredientes { background: var(--bg-light); }
+        .grid-ingredientes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .ingrediente-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid var(--accent-green);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        /* Timeline (Como funciona) */
+        .timeline-item {
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 0;
+        }
+        .timeline-week { color: var(--primary-color); font-weight: bold; text-transform: uppercase; margin-bottom: 5px; display: block; }
+
+        /* Sintomas */
+        .symptoms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            text-align: center;
+        }
+        .symptom-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+        }
+        .symptom-icon { font-size: 2rem; margin-bottom: 10px; display: block; }
+
+        /* Doctor Section */
+        .doctor-box {
+            background: #fdfbfb;
+            padding: 40px;
+            border-radius: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            border: 1px solid #eee;
+        }
+        .quote { font-style: italic; font-size: 1.1rem; color: #555; }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            nav ul { display: none; }
+            .doctor-box { flex-direction: column; text-align: center; }
+            .container { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">DIO<span>FIN</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#benefits">लाभ (Benefits)</a></li>
+                    <li><a href="#ingredients">सामग्री (Ingredients)</a></li>
+                    <li><a href="#usage">उपयोग (Usage)</a></li>
+                    <li><a href="#comprar" style="color: var(--primary-color); font-weight: bold;">अभी ऑर्डर करें</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container" style="flex-direction: column;">
+            <span style="background: var(--secondary-color); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin-bottom: 10px;">NEW FORMULA - TABLETS</span>
+            <h1>एकीकृत समर्थन डायबिटीज के लिए<br><span style="font-size: 1.5rem; color: #555;">(Integrated Support for Diabetes)</span></h1>
+            
+            <p>Diofin आपके रक्त शर्करा को नियंत्रित करने और अग्न्याशय को बहाल करने में मदद करता है!</p>
+            
+            <img src="Diofin.png" alt="Diofin Tablets Ayurvedic Medicine" class="product-hero-img">
+
+            <ul class="hero-list">
+                <li><strong>रक्त शर्करा को कम करता है:</strong> और इसे लंबे समय तक स्थिर रखता है (Stabilizes blood sugar long-term).</li>
+                <li><strong>अग्नाशयी कार्य को पुनर्स्थापित करता है:</strong> (Restores pancreatic function naturally).</li>
+                <li><strong>लीवर और किडनी की कार्यक्षमता को बढ़ाता है:</strong> (Enhances liver and kidney function).</li>
+                <li><strong>कोलेस्ट्रॉल कम करता है:</strong> और एथेरोस्क्लेरोसिस को रोकता है (Helps reduce cholesterol).</li>
+            </ul>
+
+            <div class="price-tag">
+                <span class="old-price">4980 INR</span>
+                <span class="new-price">2490 INR</span>
+                <p style="font-weight: bold; color: var(--accent-green); font-size: 0.9rem; margin-top: 5px;">50% OFF TODAY IN INDIA</p>
+            </div>
+
+            <br>
+            <a href="https://rpy40.doctortraffox.com/l" class="btn-cta">अभी ऑर्डर करें (Order Now)</a>
+        </div>
+    </section>
+
+    <section style="background: #fff3cd;">
+        <div class="container" style="flex-direction: column;">
+            <h2 class="section-title" style="color: #c0392b;">आप सावधान रहेंगे<br><span style="font-size: 1.2rem;">(You should be careful if you have at least one symptom)</span></h2>
+            
+            <div class="symptoms-grid">
+                <div class="symptom-item">
+                    <span class="symptom-icon">⚖️</span>
+                    <p>तेजी से वजन बढ़ना या कम होना</p>
+                </div>
+                <div class="symptom-item">
+                    <span class="symptom-icon">💧</span>
+                    <p>लगातार प्यास लगना (Constant Thirst)</p>
+                </div>
+                <div class="symptom-item">
+                    <span class="symptom-icon">🚽</span>
+                    <p>जल्दी पेशाब आना (Frequent Urination)</p>
+                </div>
+                <div class="symptom-item">
+                    <span class="symptom-icon">🤕</span>
+                    <p>घाव ठीक से न भरना (Slow Healing)</p>
+                </div>
+                <div class="symptom-item">
+                    <span class="symptom-icon">👁️</span>
+                    <p>दृश्य तीक्ष्णता में कमी (Vision Loss)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits">
+        <div class="container">
+            <div class="doctor-box">
+                <div style="flex: 1;">
+                    <img src="https://placehold.co/150x150/2c3e50/ffffff?text=Dr" alt="Doctor" style="border-radius: 50%; margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color);">Raju Mahmood Khurana</h3>
+                    <p>एंडोक्रिनोलॉजी में विशेषज्ञ (Endocrinology Specialist)</p>
+                </div>
+                <div style="flex: 2;">
+                    <h2 style="margin-bottom: 20px;">रक्त शर्करा नियंत्रण के लिए № 1</h2>
+                    <p class="quote">"मैं Diofin Tablets की अनुशंसा करता हूं। यह न केवल शर्करा को कम करता है, बल्कि अग्न्याशय, लीवर और किडनी को भी सहायता प्रदान करता है, जिससे भविष्य की जटिलताओं का खतरा कम हो जाता है।"</p>
+                    <br>
+                    <p><strong>Diofin आजमाएं और देखें कि यह कितना प्रभावी है!</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ingredients" class="ingredientes">
+        <div class="container" style="flex-direction: column;">
+            <h2 class="section-title">प्राकृतिक और प्रभावी सामग्री<br><span style="font-size: 1.2rem; color: #555;">(Natural Ingredients)</span></h2>
+            <div class="grid-ingredientes">
+                <div class="ingrediente-card">
+                    <div>
+                        <h3>🌿 Gymnema Sylvestre</h3>
+                        <p>रक्त में ग्लूकोज को संसाधित करने में मदद करता है।</p>
+                    </div>
+                </div>
+                <div class="ingrediente-card">
+                    <div>
+                        <h3>🍇 Syzygium Cumini</h3>
+                        <p>पाचन विकारों का इलाज करने में सक्षम।</p>
+                    </div>
+                </div>
+                <div class="ingrediente-card">
+                    <div>
+                        <h3>🥒 Momordica Charantia</h3>
+                        <p>दीर्घकालिक रक्त शर्करा नियंत्रण के कई मार्करों में सुधार करता है।</p>
+                    </div>
+                </div>
+                <div class="ingrediente-card">
+                    <div>
+                        <h3>🌱 Aloe Barbadensis</h3>
+                        <p>इंसुलिन संवेदनशीलता को बढ़ाने में मदद करता है।</p>
+                    </div>
+                </div>
+                <div class="ingrediente-card">
+                    <div>
+                        <h3>🧡 Curcuma Longa</h3>
+                        <p>रक्त कोलेस्ट्रॉल को कम करने और हृदय रोग को रोकने में मदद करता है।</p>
+                    </div>
+                </div>
+                <div class="ingrediente-card">
+                    <div>
+                        <h3>🛡️ Tinospora Cordifolia</h3>
+                        <p>कोलेस्ट्रॉल के स्तर को सामान्य रखता है; प्रतिरक्षा प्रणाली को उत्तेजित करता है।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container" style="flex-direction: column;">
+            <h2 class="section-title">Diofin कैसे काम करता है<br><span style="font-size: 1.2rem;">(How it Works)</span></h2>
+            
+            <div style="max-width: 800px; margin: auto; text-align: left;">
+                <div class="timeline-item">
+                    <span class="timeline-week">सप्ताह 1 (Week 1):</span>
+                    <p>रक्त को साफ करने और ग्लूकोज के स्तर को कम करने की प्रक्रिया शुरू होती है।</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-week">सप्ताह 2 (Week 2):</span>
+                    <p>इंसुलिन के प्रति अग्न्याशय का चयापचय और संवेदनशीलता सामान्य हो जाती है।</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-week">सप्ताह 3 (Week 3):</span>
+                    <p>ग्लूकोज संश्लेषण में अवरोध होता है। यह इंसुलिन स्राव को उत्तेजित करता है।</p>
+                </div>
+                <div class="timeline-item" style="border-color: var(--accent-green);">
+                    <span class="timeline-week" style="color: var(--accent-green);">सप्ताह 4 (Week 4):</span>
+                    <p>रक्त शर्करा का स्तर सामान्य हो जाता है। (Blood sugar level stabilizes).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="usage" style="background: #f4f7f6;">
+        <div class="container" style="flex-direction: column;">
+            <h2 class="section-title">Diofin कैसे लें<br><span style="font-size: 1.2rem;">(How to take)</span></h2>
+            
+            <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; width: 280px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <div style="font-size: 3rem; color: var(--primary-color); font-weight: bold;">1</div>
+                    <h3>खुराक (Dosage)</h3>
+                    <p><strong>दिन में 2 बार, 1 टैबलेट लें।</strong><br>(Take 1 tablet, 2 times a day).</p>
+                </div>
+                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; width: 280px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <div style="font-size: 3rem; color: var(--primary-color); font-weight: bold;">2</div>
+                    <h3>कोर्स (Course)</h3>
+                    <p>प्रवेश का अनुशंसित कोर्स 30 दिन का है। (Recommended course is 30 days).</p>
+                </div>
+                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; width: 280px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <div style="font-size: 3rem; color: var(--primary-color); font-weight: bold;">3</div>
+                    <h3>सुरक्षित (Safe)</h3>
+                    <p>अन्य दवाओं के साथ कोई मतभेद नहीं है। (Safe to use with other meds).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comprar" style="background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)); color: white; padding: 80px 0;">
+        <div class="container" style="justify-content: center;">
+            <div style="background: #fff; color: var(--text-dark); padding: 40px; border-radius: 20px; max-width: 600px; width: 100%; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                <h2 style="color: var(--primary-color); margin-bottom: 10px;">Diofin Tablets - [IN]</h2>
+                <p>Limited Stock in India</p>
+                
+                <div class="price-tag" style="background: #f9f9f9; width: 100%;">
+                    <p style="color: #666;">Price:</p>
+                    <span class="old-price">4980 INR</span>
+                    <span class="new-price" style="color: var(--primary-color);">2490 INR</span>
+                </div>
+
+                <div style="margin: 20px 0; text-align: left; padding-left: 20px;">
+                    <p>✅ <strong>Cash on Delivery (COD) Available</strong></p>
+                    <p>✅ Natural Ayurvedic Formula</p>
+                    <p>✅ Enhances Liver & Kidney Function</p>
+                </div>
+
+                <a href="https://rpy40.doctortraffox.com/l" class="btn-cta" style="width: 100%;">अभी ऑर्डर करें (ORDER NOW)</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="flex-direction: column;">
+            <p>&copy; 2026 Diofin India. All rights reserved.</p>
+            <div style="margin-top: 20px; color: #bdc3c7; font-size: 0.75rem; text-align: center; max-width: 800px;">
+                <p><strong>Disclaimer:</strong> यह उत्पाद एक आयुर्वेदिक प्रोप्राइटरी मेडिसिन है। परिणाम व्यक्ति-दर-व्यक्ति भिन्न हो सकते हैं। यह उत्पाद किसी बीमारी का निदान, उपचार, इलाज या रोकथाम करने का इरादा नहीं रखता है।</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
